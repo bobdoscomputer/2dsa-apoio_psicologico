@@ -1,0 +1,33 @@
+{
+  "name": "VolunteerStatus",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "availability": {
+      "type": "string",
+      "enum": [
+        "online",
+        "busy",
+        "offline"
+      ],
+      "default": "offline"
+    },
+    "total_sessions": {
+      "type": "number",
+      "default": 0
+    },
+    "active_sessions": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "user_id",
+    "full_name"
+  ]
+}
