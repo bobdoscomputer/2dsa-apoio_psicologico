@@ -1,0 +1,58 @@
+{
+  "name": "PsychologistProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "crp": {
+      "type": "string"
+    },
+    "specialties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bio": {
+      "type": "string"
+    },
+    "photo_url": {
+      "type": "string",
+      "file_upload": true
+    },
+    "available_slots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string"
+          },
+          "start_time": {
+            "type": "string"
+          },
+          "end_time": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "user_id",
+    "full_name",
+    "crp"
+  ]
+}
