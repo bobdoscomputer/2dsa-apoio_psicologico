@@ -1,0 +1,39 @@
+{
+  "name": "DiaryEntry",
+  "type": "object",
+  "properties": {
+    "mood": {
+      "type": "string",
+      "enum": [
+        "muito_mal",
+        "mal",
+        "neutro",
+        "bem",
+        "muito_bem"
+      ]
+    },
+    "mood_score": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "mood",
+    "date"
+  ]
+}
