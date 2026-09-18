@@ -1,0 +1,53 @@
+{
+  "name": "ChatConversation",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string"
+    },
+    "student_name": {
+      "type": "string"
+    },
+    "volunteer_id": {
+      "type": "string"
+    },
+    "volunteer_name": {
+      "type": "string"
+    },
+    "psychologist_id": {
+      "type": "string"
+    },
+    "psychologist_name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "active",
+        "closed",
+        "referred"
+      ],
+      "default": "waiting"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "volunteer",
+        "psychologist"
+      ]
+    },
+    "last_message": {
+      "type": "string"
+    },
+    "last_message_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "student_id",
+    "student_name",
+    "type"
+  ]
+}
