@@ -1,0 +1,46 @@
+{
+  "name": "VolunteerApplication",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "motivation": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "resume_url": {
+      "type": "string",
+      "file_upload": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "reviewer_notes": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "motivation"
+  ]
+}
